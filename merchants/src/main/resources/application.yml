@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ImoocMerchants
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/passbook?autoReconnect=true
+    name: famgy
+    password: abcd
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: passbook
+    listener:
+      concurrency: 4
+
+server:
+  port: 8080
+
+logging:
+  level: debug
+  file: imooc-merchants.log
+
